@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+body, main {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+body {
+  background-image: url('./assets/page_background.png');
+  background-color: #1D1D1D;
+  font-family: 'Inter', sans-serif;
+  background-size: cover;
+}

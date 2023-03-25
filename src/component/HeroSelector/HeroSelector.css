@@ -1,0 +1,71 @@
+.hero-current-container {
+    width: 500px;
+    height: 65px;
+    background: linear-gradient(0deg, #191919 0%, rgba(25, 25, 25, 0) 129.04%);
+    border-radius: 20px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.hero-avatar-shadow {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background: linear-gradient(180deg, #1D1D1D 0%, rgba(29, 29, 29, 0.18) 100%);
+    border-radius: 20px;
+}
+
+.hero-avatar {
+    border-radius: 20px;
+    width: 65px;
+    padding-top: 1px;
+    padding-left: 1px;
+}
+
+.hero-name {
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.hero-selector-select-wrapper {
+    padding-right: 10px;
+    background: #191919;
+}
+
+.hero-selector-select {
+
+    max-height: 200px;
+    margin-top: 15px;
+    width: 500px;
+    border-radius: 3px;
+    overflow-y: scroll;
+}
+
+.hero-selector-select::-webkit-scrollbar {
+    width: 6px;
+}
+
+.hero-selector-select::-webkit-scrollbar-track {
+    background: linear-gradient(0deg, #121212, #121212), #121212;
+    border-radius: 5px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+}
+
+.hero-selector-select::-webkit-scrollbar-thumb {
+    background: linear-gradient(0deg, #2E2E2E, #2E2E2E), #121212;
+    border-radius: 5px;
+}
+
+.hero-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+}

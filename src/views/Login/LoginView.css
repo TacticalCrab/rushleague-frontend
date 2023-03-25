@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600&display=swap');
+
+.title-text {
+    padding-top: 40px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 96px;
+    font-weight: 600;
+}
+
+.from-container {
+    margin-top: 91px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

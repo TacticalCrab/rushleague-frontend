@@ -1,0 +1,22 @@
+.image-uploader {
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(0deg, #191919 0%, rgba(25, 25, 25, 0) 129.04%) no-repeat center;
+    background-size: cover;
+    border-radius: 43px;
+    cursor: pointer;
+}
+
+.image-uploader-text-container {
+    padding: 26px 32px;
+}
+
+.image-uploader-upload-text {
+    font-size: 36px;
+    color: white;
+}
+
+.image-uploader-select-text {
+    color: #989898;
+    font-size: 24px;
+}

@@ -1,0 +1,4 @@
+.digit-buttons {
+    display: flex;
+    gap: 16px;
+}

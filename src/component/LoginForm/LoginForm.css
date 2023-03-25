@@ -1,0 +1,18 @@
+.inputs-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 57px;
+}
+
+.login-button-wrapper {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.error-box-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

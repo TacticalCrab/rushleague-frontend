@@ -1,0 +1,17 @@
+.digit-button {
+    width: 65px;
+    height: 65px;
+    border-radius: 14px;
+    font-size: 36px;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: linear-gradient(0deg, #191919 0%, rgba(25, 25, 25, 0) 129.04%);
+}
+
+.score-box-active {
+    color: #FFB400;
+}
