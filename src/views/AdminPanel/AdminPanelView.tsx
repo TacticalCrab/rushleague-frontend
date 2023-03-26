@@ -3,8 +3,8 @@ import {Navbar} from '../../component/Navbar/Navbar';
 import {TeamPanel} from '../../component/TeamPanel/TeamPanel';
 import {SubmitButton} from '../../component/SubmitButton/SubmitButton';
 import {useEffect, useState} from 'react';
-import {getHeroSpecs, getTeamSettings, setTeamSettings as setAPITeamSettings} from '../../api/Admin/AdminService';
-import {HeroBans, HeroSpecs, TeamSettings} from '../../api/Admin/AdminService.interface';
+import {getHeroSpecs, getTeamSettings, setTeamSettings as setAPITeamSettings} from '../../axios/Admin/AdminService';
+import {HeroBans, HeroSpecs, TeamSettings} from '../../axios/Admin/AdminService.interface';
 import {useImmer} from 'use-immer';
 import {HeroSelector} from '../../component/HeroSelector/HeroSelector';
 
@@ -46,11 +46,7 @@ export const AdminPanelView = () => {
     }
 
     return<>
-        <Navbar desc={'Admin Panel'} tabs={[
-            {url: "http://www.google.com", text: "Google"},
-            {url: "http://www.facebook.com", text: "Facebook"},
-            {url: "http://localhost:8080/admin", text: "Login"}
-        ]}/>
+        <Navbar desc={'Admin Panel'}/>
 
         {!teamSettings
             ? <div className={'loading-message'}>Loading...</div>

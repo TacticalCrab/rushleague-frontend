@@ -3,7 +3,7 @@ import React, {useEffect} from 'react';
 import './TeamPanel.css';
 import {Input} from '../Input/Input';
 import {TeamScoreButtons} from '../TeamScoreButtons/TeamScoreButtons';
-import {TeamSettingsSingleInterface} from '../../api/Admin/AdminService.interface';
+import {TeamSettingsSingleInterface} from '../../axios/Admin/AdminService.interface';
 import {useImmer} from 'use-immer';
 
 type TeamPanelProps = {

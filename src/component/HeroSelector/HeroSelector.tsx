@@ -1,4 +1,4 @@
-import {HeroSpecs} from '../../api/Admin/AdminService.interface';
+import {HeroSpecs} from '../../axios/Admin/AdminService.interface';
 import React, {useState} from 'react';
 import './HeroSelector.css';
 

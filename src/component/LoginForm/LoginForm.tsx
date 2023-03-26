@@ -3,7 +3,7 @@ import {SubmitButton} from '../SubmitButton/SubmitButton';
 import './LoginForm.css';
 import {ErrorBox} from '../ErrorBox/ErrorBox';
 import {useEffect, useState} from 'react';
-import {loginService} from '../../api/Auth/loginService';
+import {loginService} from '../../axios/Auth/loginService';
 import {useNavigate} from 'react-router-dom';
 
 export const LoginForm = () => {
