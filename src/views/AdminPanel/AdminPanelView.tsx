@@ -10,33 +10,11 @@ import {HeroSelector} from '../../component/HeroSelector/HeroSelector';
 
 export const AdminPanelView = () => {
     const [teamSettings, setTeamSettings] = useImmer<TeamSettings | undefined>(undefined);
-    const [heroSpecs, setHeroSpecs] = useState<HeroSpecs | undefined>(undefined);
     const [heroBans, setHeroBans] = useImmer<HeroBans>({team_1: 'default', team_2: 'default'});
 
     useEffect(() => {
         getTeamSettings().then((data) => {
             setTeamSettings(data);
-        });
-
-        getHeroSpecs().then((data) => {
-            const formatData: HeroSpecs = {
-                default: {
-                    name: 'Default',
-                    icon: API_URL + 'assets/hero/' + data.default.icon,
-                    splash: API_URL + 'assets/hero/' + data.default.splash
-                }
-            };
-
-            Object.entries(data).forEach(([name, specs]) => {
-
-                formatData[name] = {
-                    name: specs.name,
-                    icon: specs.icon ? API_URL + 'assets/hero/' + specs.icon : null,
-                    splash: specs.splash ? API_URL + 'assets/hero/' + specs.splash : null
-                }
-            });
-
-            setHeroSpecs(formatData);
         });
     }, [])
     const handleOnClick = async () => {
@@ -78,19 +56,6 @@ export const AdminPanelView = () => {
                         align={'right'} />
                 </div>
                 <div className={'team-panel-lower-container'}>
-                    <div> {heroSpecs ?
-                        <div className={'hero-selector-wrapper'}>
-                            <div className={'hero-bans-label'}> Hero ban </div>
-                            <HeroSelector
-                                currentHero={heroBans.team_1}
-                                onChange={(heroName) => {
-                                setHeroBans(heroBans => {
-                                   heroBans.team_1 = heroName;
-                                });
-                            }} heroSpecs={heroSpecs}/>
-                        </div>
-
-                        : <></> } </div>
                     <div className={'middle-actions-container'}>
                         <div onClick={() => {
                                 setTeamSettings(teamSettings => {
@@ -112,19 +77,6 @@ export const AdminPanelView = () => {
                             <SubmitButton onClick={handleOnClick} text={'Confirm changes'}/>
                         </div>
                     </div>
-                    <div> {heroSpecs ?
-                        <div className={'hero-selector-wrapper'}>
-                            <div className={'hero-bans-label'}> Hero ban </div>
-                            <HeroSelector
-                                currentHero={heroBans.team_2}
-                                onChange={(heroName) => {
-                                    setHeroBans(heroBans => {
-                                        heroBans.team_2 = heroName;
-                                    });
-                                }} heroSpecs={heroSpecs}/>
-                        </div>
-
-                        : <></> } </div>
                 </div>
             </>
         }
